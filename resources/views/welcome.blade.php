@@ -20,6 +20,7 @@
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <form action="/" method="post" class="lead-form">
+                    @csrf
                     <div class="form-group lead-form--two-column">
                         <label for="firstName">First name</label>
                         <input type="text" class="form-control" name="firstName" id="firstName">
@@ -42,3 +43,7 @@
         </div>
     </div>
 @endsection
+
+@push('footer-scripts')
+    <script src="{{ asset('js/leads-page.js') }}"></script>
+@endpush
